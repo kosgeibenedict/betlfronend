@@ -1,0 +1,96 @@
+<div class="min-h-screen bg-gray-50 text-gray-900 p-8 font-sans">
+  <div class="max-w-6xl mx-auto">
+    
+    <div class="flex justify-between items-center mb-8">
+      <div>
+        <h1 class="text-3xl font-bold">BETL Content Management</h1>
+        <p class="text-gray-500">Edit website copy and upload media assets instantly.</p>
+      </div>
+      <button (click)="createNewBlock()" class="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors shadow-md">
+        + New Content Block
+      </button>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Content Keys List -->
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 lg:col-span-1 h-[600px] overflow-y-auto">
+        <h2 class="text-lg font-bold mb-4 border-b pb-2">Content Blocks</h2>
+        
+        <div *ngIf="contentBlocks.length === 0" class="text-gray-400 text-sm italic">
+          No content blocks found. Create one to get started.
+        </div>
+
+        <ul class="space-y-2">
+          <li *ngFor="let block of contentBlocks">
+            <button (click)="editBlock(block)" 
+                    class="w-full text-left px-4 py-3 rounded-lg border transition-all"
+                    [ngClass]="selectedBlock?.blockKey === block.blockKey ? 'bg-blue-50 border-blue-200 text-blue-700' : 'border-gray-100 hover:bg-gray-50 text-gray-700'">
+              <div class="font-medium font-mono text-sm">{{ block.blockKey }}</div>
+              <div class="text-xs truncate text-gray-500 mt-1 uppercase">{{ block.type }}</div>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Editor Panel -->
+      <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 lg:col-span-2">
+        <h2 class="text-xl font-bold mb-6 border-b pb-2">
+          {{ selectedBlock ? 'Edit: ' + selectedBlock.blockKey : 'Create New Block' }}
+        </h2>
+
+        <form [formGroup]="editForm" (ngSubmit)="saveContent()" class="space-y-6">
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-1">Block Key</label>
+              <input type="text" formControlName="blockKey" placeholder="e.g. home.hero.title" 
+                     class="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                     [readonly]="selectedBlock !== null">
+              <p class="text-xs text-gray-400 mt-1" *ngIf="selectedBlock">Block keys cannot be changed once created.</p>
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-1">Content Type</label>
+              <select formControlName="type" class="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                <option value="TEXT">Text String</option>
+                <option value="IMAGE">Image / Media</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Media Uploader (Shows only if type is IMAGE) -->
+          <div *ngIf="editForm.get('type')?.value === 'IMAGE'" class="p-4 bg-blue-50 border border-blue-100 rounded-lg">
+            <label class="block text-sm font-bold text-blue-800 mb-2">Upload New Media</label>
+            <div class="flex items-center space-x-4">
+              <input type="file" (change)="onFileSelected($event)" accept="image/*" class="text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200">
+              <button type="button" (click)="uploadMedia()" [disabled]="!selectedFile" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 disabled:opacity-50">Upload</button>
+            </div>
+            <div *ngIf="uploadedImageUrl" class="mt-4 text-sm text-emerald-600 flex items-center">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Media uploaded successfully to server! URL populated below.
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold text-gray-700 mb-1">Content Value</label>
+            <textarea formControlName="content" rows="6" placeholder="Enter text or paste media URL..."
+                      class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none font-mono text-sm"></textarea>
+            
+            <!-- Image Preview -->
+            <div *ngIf="editForm.get('type')?.value === 'IMAGE' && editForm.get('content')?.value" class="mt-4">
+              <p class="text-xs text-gray-500 font-bold mb-2 uppercase">Image Preview</p>
+              <img [src]="editForm.get('content')?.value" class="h-48 object-cover rounded-lg border border-gray-200 shadow-sm" alt="Preview">
+            </div>
+          </div>
+
+          <div class="flex justify-end pt-4 border-t border-gray-100">
+            <button type="submit" [disabled]="!editForm.valid" class="px-8 py-3 bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition-colors shadow-lg disabled:opacity-50">
+              Save Content Block
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
