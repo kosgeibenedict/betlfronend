@@ -1,0 +1,433 @@
+<div class="min-h-screen bg-[#050508] text-white overflow-hidden font-sans selection:bg-betl-cyan selection:text-black pt-20">
+
+  <!-- Hero Section -->
+  <section class="relative pt-24 pb-32 overflow-hidden border-b border-white/5">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-betl-cyan/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-betl-violet/10 rounded-full blur-[120px] pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+      <div class="space-y-8">
+        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300">
+          <svg class="w-4 h-4 text-betl-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          <span>Multi-Tenant NL-to-SQL Platform</span>
+        </div>
+        
+        <h1 class="text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
+          Ask Your Data<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-400">Anything.</span> Get<br>
+          Answers in <span class="text-betl-cyan">Seconds.</span>
+        </h1>
+        
+        <p class="text-lg text-gray-400 leading-relaxed max-w-xl">
+          inteliPort connects securely to your existing databases and lets anyone on your team — no SQL, no coding, no waiting — ask questions in plain English and get instant answers, charts, and exportable reports.
+        </p>
+        
+        <div class="flex items-center space-x-4 pt-2">
+          <button (click)="toggleForm()" class="px-8 py-3.5 bg-betl-cyan text-black font-bold rounded-lg hover:bg-cyan-400 transition-colors shadow-[0_0_20px_rgba(0,240,255,0.3)]">
+            Subscribe Now &rarr;
+          </button>
+          <a href="#how-it-works" class="px-8 py-3.5 border border-white/10 rounded-lg hover:bg-white/5 transition-colors font-medium text-gray-300">
+            See How It Works
+          </a>
+        </div>
+        
+        <p class="text-sm text-gray-500 pt-4 border-t border-white/5 max-w-md">
+          Intelligent data access for your enterprise — stop waiting on reports, start getting answers.
+        </p>
+      </div>
+      
+      <!-- CSS Network Approximation -->
+      <div class="relative h-[500px] w-full bg-[#0a0a0f] rounded-2xl border border-white/5 flex items-center justify-center overflow-hidden shadow-2xl group perspective-1000">
+        <!-- Grid Background -->
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        
+        <!-- Glowing Center Core -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-betl-violet/30 rounded-full blur-[40px] animate-pulse"></div>
+        <div class="relative w-24 h-24 rounded-full bg-gradient-to-br from-betl-violet to-betl-cyan opacity-80 shadow-[0_0_50px_rgba(138,43,226,0.6)] flex items-center justify-center border border-white/30 backdrop-blur-md z-20 group-hover:scale-105 transition-transform duration-700">
+           <div class="w-full h-full rounded-full bg-white/10 backdrop-blur-xl absolute inset-0"></div>
+           <svg class="w-10 h-10 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+        </div>
+        
+        <!-- Connecting Nodes -->
+        <svg class="absolute inset-0 w-full h-full z-10" xmlns="http://www.w3.org/2000/svg">
+          <line x1="50%" y1="50%" x2="20%" y2="20%" stroke="rgba(255,255,255,0.1)" stroke-width="1" class="stroke-dasharray"></line>
+          <line x1="50%" y1="50%" x2="80%" y2="30%" stroke="rgba(0,240,255,0.2)" stroke-width="2" class="stroke-dasharray"></line>
+          <line x1="50%" y1="50%" x2="25%" y2="80%" stroke="rgba(138,43,226,0.2)" stroke-width="2" class="stroke-dasharray"></line>
+          <line x1="50%" y1="50%" x2="75%" y2="75%" stroke="rgba(255,255,255,0.1)" stroke-width="1" class="stroke-dasharray"></line>
+          <line x1="50%" y1="50%" x2="10%" y2="50%" stroke="rgba(0,240,255,0.15)" stroke-width="1.5" class="stroke-dasharray"></line>
+        </svg>
+
+        <!-- Node dots -->
+        <div class="absolute top-[20%] left-[20%] w-3 h-3 bg-betl-cyan rounded-full shadow-[0_0_10px_rgba(0,240,255,0.8)] z-20"></div>
+        <div class="absolute top-[30%] right-[20%] w-4 h-4 bg-betl-violet rounded-full shadow-[0_0_15px_rgba(138,43,226,0.8)] z-20"></div>
+        <div class="absolute bottom-[20%] left-[25%] w-3 h-3 bg-pink-500 rounded-full shadow-[0_0_10px_rgba(236,72,153,0.8)] z-20"></div>
+        <div class="absolute bottom-[25%] right-[25%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_rgba(96,165,250,0.8)] z-20"></div>
+        <div class="absolute top-[50%] left-[10%] w-2 h-2 bg-betl-cyan rounded-full shadow-[0_0_10px_rgba(0,240,255,0.8)] z-20 animate-ping"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Modal/Overlay -->
+  @if(showForm) {
+    <div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in">
+      <div class="bg-[#0a0a0f] border border-white/10 rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden">
+        <div class="p-6 border-b border-white/5 flex justify-between items-center bg-white/5">
+          <h3 class="text-xl font-bold text-white">Subscribe to inteliPort</h3>
+          <button (click)="toggleForm()" class="text-gray-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <div class="p-8">
+          <form (submit)="onSubmit($event)" class="space-y-5">
+            <input type="hidden" name="access_key" value="388a003a-8712-429a-827b-cea3426ac883">
+            <input type="hidden" name="subject" value="New InteliPort Subscription Request">
+            
+            <div class="space-y-1.5">
+              <label class="text-sm font-medium text-gray-300">Company Name</label>
+              <input type="text" name="company" required class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-betl-cyan/50" placeholder="Acme Corp">
+            </div>
+            
+            <div class="space-y-1.5">
+              <label class="text-sm font-medium text-gray-300">Work Email</label>
+              <input type="email" name="email" required class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-betl-cyan/50" placeholder="jane@acmecorp.com">
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="text-sm font-medium text-gray-300">Database Type (Optional)</label>
+              <input type="text" name="database" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-betl-cyan/50" placeholder="PostgreSQL, MySQL, Oracle, etc.">
+            </div>
+            
+            <button type="submit" [disabled]="isSubmitting" class="w-full mt-4 py-3 bg-betl-cyan text-black font-bold rounded-lg hover:bg-cyan-400 transition-colors disabled:opacity-50">
+              {{ isSubmitting ? 'Submitting...' : 'Request Onboarding' }}
+            </button>
+            
+            @if(submitSuccess) {
+              <div class="mt-4 p-3 bg-green-500/10 border border-green-500/30 text-green-400 text-sm rounded-lg text-center">
+                Request received! Our back office will contact you for onboarding.
+              </div>
+            }
+            @if(submitError) {
+              <div class="mt-4 p-3 bg-red-500/10 border border-red-500/30 text-red-400 text-sm rounded-lg text-center">
+                Something went wrong. Please try again later.
+              </div>
+            }
+          </form>
+        </div>
+      </div>
+    </div>
+  }
+
+  <!-- The Problem Section -->
+  <section class="py-24 max-w-5xl mx-auto px-6 border-b border-white/5">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">The Problem We're Solving</h2>
+      <p class="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto">
+        Every organization sits on a goldmine of data — and almost nobody outside the data team can access it without friction. A simple question like <strong class="text-white">"Which branch had the lowest sales last month?"</strong> triggers a slow, expensive chain of events:
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-4 mb-16">
+      <!-- Step 1 -->
+      <div class="bg-[#0f0f13] border border-white/5 rounded-xl p-6 relative">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </div>
+        <div class="text-xs font-bold text-gray-500 tracking-wider mb-2 uppercase">Step 1</div>
+        <p class="text-gray-300 text-sm">A manager emails the analytics team</p>
+      </div>
+      <!-- Step 2 -->
+      <div class="bg-[#0f0f13] border border-white/5 rounded-xl p-6">
+        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+        </div>
+        <div class="text-xs font-bold text-gray-500 tracking-wider mb-2 uppercase">Step 2</div>
+        <p class="text-gray-300 text-sm">The analyst writes a query, pulls the data, builds a chart</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="bg-[#0f0f13] border border-white/5 rounded-xl p-6">
+        <div class="w-10 h-10 rounded-lg bg-teal-500/10 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        </div>
+        <div class="text-xs font-bold text-gray-500 tracking-wider mb-2 uppercase">Step 3</div>
+        <p class="text-gray-300 text-sm">It gets reviewed, formatted, and sent back</p>
+      </div>
+      <!-- Step 4 -->
+      <div class="bg-[#0f0f13] border border-white/5 rounded-xl p-6">
+        <div class="w-10 h-10 rounded-lg bg-rose-500/10 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <div class="text-xs font-bold text-gray-500 tracking-wider mb-2 uppercase">Step 4</div>
+        <p class="text-gray-300 text-sm">By the time the answer arrives, the moment to act has passed</p>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <p class="text-xl text-gray-400 font-light">
+        This isn't a data problem. It's a <strong class="text-white font-semibold">speed problem</strong> — and in business, speed is the difference between reacting and leading.
+      </p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="py-24 bg-[#08080a] border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">How inteliPort Works</h2>
+        <p class="text-gray-400 text-lg">From question to decision in four simple steps.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-8 hover:bg-white/5 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Connect Securely</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Link your existing database — no migration, no disruption. inteliPort works alongside the systems you already have.</p>
+        </div>
+        
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-8 hover:bg-white/5 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-betl-cyan flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Ask</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Type your question in plain English: "How many new customers did we get this quarter?" or "What was our lowest-performing product last week?"</p>
+        </div>
+
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-8 hover:bg-white/5 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-blue-400 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Get Answers Instantly</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Our AI engine translates your question into optimized SQL, runs it securely, and returns results in seconds.</p>
+        </div>
+
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-8 hover:bg-white/5 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Visualize & Export</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Auto-generated charts, graphs, and data cards — plus one-click export to polished Excel sheets or branded PDF reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before vs After -->
+  <section class="py-24 max-w-4xl mx-auto px-6 border-b border-white/5">
+    <h2 class="text-3xl font-bold text-center mb-12">Before vs. After inteliPort</h2>
+    
+    <div class="bg-[#0c0c10] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-black/50 border-b border-white/5 text-sm">
+            <th class="p-4 w-1/3 text-gray-500 font-medium"></th>
+            <th class="p-4 w-1/3 text-rose-400 font-medium"><span class="mr-2">✕</span> Before inteliPort</th>
+            <th class="p-4 w-1/3 text-emerald-400 font-medium bg-emerald-500/5"><span class="mr-2">✓</span> After inteliPort</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="border-b border-white/5">
+            <td class="p-4 font-medium text-white">Step 1</td>
+            <td class="p-4 text-gray-400">Ask a question</td>
+            <td class="p-4 text-gray-300 bg-emerald-500/5">Ask a question</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="p-4 font-medium text-white">Step 2</td>
+            <td class="p-4 text-gray-400">Wait for the analyst to be free</td>
+            <td class="p-4 text-gray-300 bg-emerald-500/5">Get an instant answer</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="p-4 font-medium text-white">Step 3</td>
+            <td class="p-4 text-gray-400">Wait for the report to be built</td>
+            <td class="p-4 text-gray-300 bg-emerald-500/5">See it as a chart, table, or summary</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="p-4 font-medium text-white">Step 4</td>
+            <td class="p-4 text-gray-400">Wait for review and formatting</td>
+            <td class="p-4 text-emerald-400 font-semibold bg-emerald-500/5">Make a decision — right now</td>
+          </tr>
+          <tr class="border-b border-white/5 bg-white/[0.02]">
+            <td class="p-4 font-medium text-white">Turnaround</td>
+            <td class="p-4 text-gray-400">Hours to days</td>
+            <td class="p-4 text-emerald-400 font-bold bg-emerald-500/5">Seconds</td>
+          </tr>
+          <tr class="border-b border-white/5 bg-white/[0.02]">
+            <td class="p-4 font-medium text-white">Cost</td>
+            <td class="p-4 text-gray-400">Analyst hours, every single time</td>
+            <td class="p-4 text-gray-300 bg-emerald-500/5">One subscription, unlimited questions</td>
+          </tr>
+          <tr class="bg-white/[0.02]">
+            <td class="p-4 font-medium text-white">Decision-making</td>
+            <td class="p-4 text-gray-400">Delayed, reactive</td>
+            <td class="p-4 text-gray-300 bg-emerald-500/5">Immediate, proactive</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-center text-gray-400 mt-8 font-light">
+      The bottom line: <strong class="text-white font-semibold">the business that answers its own questions fastest wins.</strong>
+    </p>
+  </section>
+
+  <!-- Who This is For & Value & Features -->
+  <section class="py-24 bg-[#08080a] border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 space-y-32">
+      
+      <!-- Who this is for -->
+      <div>
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Who This Is For</h2>
+          <p class="text-gray-400 text-lg">inteliPort is built for organizations where decisions can't wait for a report.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-[#0f0f13] border border-white/5 rounded-2xl p-8">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4"><svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg></div>
+            <h4 class="font-bold text-lg mb-2">Banks & SACCOs</h4>
+            <p class="text-sm text-gray-400 leading-relaxed">Branch managers and executives needing real-time visibility into deposits, loans, defaults, and performance — with enterprise-grade security and VPN-aware connectivity.</p>
+          </div>
+          <div class="bg-[#0f0f13] border border-white/5 rounded-2xl p-8">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4"><svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg></div>
+            <h4 class="font-bold text-lg mb-2">Telecoms</h4>
+            <p class="text-sm text-gray-400 leading-relaxed">Operations and marketing teams querying subscriber, usage, and churn data without involving engineering.</p>
+          </div>
+          <div class="bg-[#0f0f13] border border-white/5 rounded-2xl p-8">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4"><svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg></div>
+            <h4 class="font-bold text-lg mb-2">Universities</h4>
+            <p class="text-sm text-gray-400 leading-relaxed">Administrators tracking enrollment, performance, and finance data across departments without IT bottlenecks.</p>
+          </div>
+          <div class="bg-[#0f0f13] border border-white/5 rounded-2xl p-8">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4"><svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m3-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></div>
+            <h4 class="font-bold text-lg mb-2">Government Bodies</h4>
+            <p class="text-sm text-gray-400 leading-relaxed">Departments needing fast, accurate, auditable access to records and statistics.</p>
+          </div>
+          <div class="bg-[#0f0f13] border border-white/5 rounded-2xl p-8">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4"><svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg></div>
+            <h4 class="font-bold text-lg mb-2">Retail & Distribution</h4>
+            <p class="text-sm text-gray-400 leading-relaxed">Regional managers comparing sales, stock, and performance across locations daily.</p>
+          </div>
+          
+          <div class="bg-[#0f0f20] border border-blue-500/30 rounded-2xl p-8 flex items-center shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+            <p class="text-lg font-medium leading-relaxed">
+              If your team asks <strong class="text-white">"can someone pull this data for me"</strong> more than once a week — <strong class="text-betl-cyan">inteliPort is for you.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Value -->
+      <div>
+        <h2 class="text-3xl font-bold text-center mb-12">What This Means for Your Business</h2>
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div class="bg-[#0f0f13] border border-white/5 rounded-xl p-6">
+            <svg class="w-6 h-6 text-blue-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h4 class="font-bold text-white mb-2">Hours saved every week</h4>
+            <p class="text-sm text-gray-400">No more waiting on analysts for routine questions.</p>
+          </div>
+          <div class="bg-[#0f0f13] border border-white/5 rounded-xl p-6">
+            <svg class="w-6 h-6 text-blue-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            <h4 class="font-bold text-white mb-2">Faster, sharper decisions</h4>
+            <p class="text-sm text-gray-400">Leadership acts on real-time data, not last week's report.</p>
+          </div>
+          <div class="bg-[#0f0f13] border border-white/5 rounded-xl p-6">
+            <svg class="w-6 h-6 text-blue-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h4 class="font-bold text-white mb-2">Lower operational cost</h4>
+            <p class="text-sm text-gray-400">One platform replaces dozens of ad-hoc reporting requests.</p>
+          </div>
+          <div class="bg-[#0f0f13] border border-white/5 rounded-xl p-6 md:col-start-1 md:col-end-2">
+            <svg class="w-6 h-6 text-blue-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <h4 class="font-bold text-white mb-2">Democratized data access</h4>
+            <p class="text-sm text-gray-400">Every team member becomes data-literate, instantly.</p>
+          </div>
+          <div class="bg-[#0f0f13] border border-white/5 rounded-xl p-6">
+            <svg class="w-6 h-6 text-blue-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+            <h4 class="font-bold text-white mb-2">A competitive edge</h4>
+            <p class="text-sm text-gray-400">While competitors wait for reports, your team already has the answer.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Inteliport (Features) -->
+      <div>
+        <h2 class="text-3xl font-bold text-center mb-12">Why inteliPort</h2>
+        <div class="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          <div class="bg-[#0a0a0f] border border-white/5 rounded-lg p-5 flex items-start space-x-3">
+            <div class="w-5 h-5 mt-0.5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0"><span class="text-emerald-400 text-xs">✓</span></div>
+            <div>
+              <h4 class="font-bold text-sm text-white mb-1">No Coding, No SQL</h4>
+              <p class="text-xs text-gray-400 leading-relaxed">Plain English in, clear answers out.</p>
+            </div>
+          </div>
+          <div class="bg-[#0a0a0f] border border-white/5 rounded-lg p-5 flex items-start space-x-3">
+            <div class="w-5 h-5 mt-0.5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0"><span class="text-emerald-400 text-xs">✓</span></div>
+            <div>
+              <h4 class="font-bold text-sm text-white mb-1">AI-Powered Insights</h4>
+              <p class="text-xs text-gray-400 leading-relaxed">Beyond raw data: inteliPort highlights trends, anomalies, and key takeaways automatically.</p>
+            </div>
+          </div>
+          <div class="bg-[#0a0a0f] border border-white/5 rounded-lg p-5 flex items-start space-x-3">
+            <div class="w-5 h-5 mt-0.5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0"><span class="text-emerald-400 text-xs">✓</span></div>
+            <div>
+              <h4 class="font-bold text-sm text-white mb-1">Instant Visualizations</h4>
+              <p class="text-xs text-gray-400 leading-relaxed">Bar charts, pie charts, and interactive data cards generated on the fly.</p>
+            </div>
+          </div>
+          <div class="bg-[#0a0a0f] border border-white/5 rounded-lg p-5 flex items-start space-x-3">
+            <div class="w-5 h-5 mt-0.5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0"><span class="text-emerald-400 text-xs">✓</span></div>
+            <div>
+              <h4 class="font-bold text-sm text-white mb-1">Export-Ready</h4>
+              <p class="text-xs text-gray-400 leading-relaxed">Polished Excel spreadsheets and branded PDF reports in one click.</p>
+            </div>
+          </div>
+          <div class="bg-[#0a0a0f] border border-white/5 rounded-lg p-5 flex items-start space-x-3">
+            <div class="w-5 h-5 mt-0.5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0"><span class="text-emerald-400 text-xs">✓</span></div>
+            <div>
+              <h4 class="font-bold text-sm text-white mb-1">Enterprise-Grade Security</h4>
+              <p class="text-xs text-gray-400 leading-relaxed">VPN-aware connectivity, robust error handling, and architecture built for sensitive institutional data.</p>
+            </div>
+          </div>
+          <div class="bg-[#0a0a0f] border border-white/5 rounded-lg p-5 flex items-start space-x-3">
+            <div class="w-5 h-5 mt-0.5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0"><span class="text-emerald-400 text-xs">✓</span></div>
+            <div>
+              <h4 class="font-bold text-sm text-white mb-1">Multi-Tenant & Themeable</h4>
+              <p class="text-xs text-gray-400 leading-relaxed">Custom contexts and corporate-identity theming, ready for organizations of any size.</p>
+            </div>
+          </div>
+          <div class="bg-[#0a0a0f] border border-white/5 rounded-lg p-5 flex items-start space-x-3">
+            <div class="w-5 h-5 mt-0.5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0"><span class="text-emerald-400 text-xs">✓</span></div>
+            <div>
+              <h4 class="font-bold text-sm text-white mb-1">Built for Scale</h4>
+              <p class="text-xs text-gray-400 leading-relaxed">Designed from the ground up for banks, telcos, universities, and government institutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-32 bg-[#050508] flex justify-center px-6">
+    <div class="bg-gradient-to-b from-[#0f0f15] to-[#050508] border border-white/10 rounded-3xl p-12 lg:p-20 text-center max-w-4xl w-full shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden">
+      <!-- Glow -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-blue-500/10 blur-[100px] pointer-events-none"></div>
+      
+      <div class="relative z-10">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Stop Waiting for Answers.<br>Start Asking.</h2>
+        <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+          Your data already has the answers. inteliPort just makes sure you can hear them — instantly.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <button (click)="toggleForm()" class="w-full sm:w-auto px-8 py-4 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition-colors shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+            Subscribe Now &rarr;
+          </button>
+          <button (click)="toggleForm()" class="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 text-white font-medium rounded-lg hover:bg-white/10 transition-colors">
+            Talk to Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
